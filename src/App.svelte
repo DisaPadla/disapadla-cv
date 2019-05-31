@@ -57,5 +57,5 @@
 	<Details />
 	<span
 		title='I have an alarm which reminds me to stay asleep'
-	>Created for fun. Powered by <a href='https://svelte.dev' target="_blank">Svelte</a></span>
+	>Created for fun. Powered by <a rel="noreferrer" href='https://svelte.dev' target="_blank">Svelte</a></span>
 </div>

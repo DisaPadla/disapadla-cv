@@ -182,6 +182,7 @@
     <a
       href='https://t.me/DisaPadla'
       target="_blank"
+      rel="noreferrer"
       aria-label="View source on GitHub"
       class='github-corner'
     >
@@ -191,6 +192,7 @@
       href='https://github.com/DisaPadla'
       target="_blank"
       aria-label="View source on GitHub"
+      rel="noreferrer"
       class='github-corner'
     >
       <svg
