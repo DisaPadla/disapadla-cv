@@ -1,7 +1,7 @@
 <script>
   import Git from '../static/git.svg';
   import Javascript from '../static/javascript.svg';
-  import React from '../static/react.svg';
+  import React from '../static/React.svg';
   import Redux from '../static/redux.svg';
   import Styled from '../static/styled.svg';
   import Jest from '../static/jest.svg'
