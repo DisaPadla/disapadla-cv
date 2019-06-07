@@ -11,104 +11,18 @@
   }
 </script>
 <style>
-  @keyframes blink {
-    10% {
-      color: #d5dfe0;
-      text-shadow: none;
-    }
-    10.1% {
-      color: #d5dfe0;
-      text-shadow: none;
-    }
-    10.2% {
-      color: #d5dfe0;
-      text-shadow: none;
-    }
-    20% {
-      color: #d5dfe0;
-      text-shadow: none;
-    }
-    20.6% {
-      color: #d5dfe0;
-      text-shadow: none;
-    }
-    30% {
-      color: #d5dfe0;
-      text-shadow: none;
-    }
-    45.1% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    50% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    55% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    55.1% {
-      text-shadow: none;
-    }
-    57% {
-      text-shadow: none;
-    }
-    57.1% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    60% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    60.1% {
-      text-shadow: none;
-    }
-    65% {
-      text-shadow: none;
-    }
-    65.1% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    75% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    75.1% {
-      text-shadow: none;
-    }
-    77% {
-      text-shadow: none;
-    }
-    77.1% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    85% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    85.1% {
-      text-shadow: none;
-    }
-    86% {
-      text-shadow: none;
-    }
-    86.1% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-    100% {
-      color: #C7F954;
-      text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
-    }
-  }
-
   @keyframes glitch-animation {
       0% {
         clip: rect(42px, 9999px, 44px, 0);
+      }
+      1% {
+      transform: scaleY(1) skewX(0deg);
+      }
+      1.5% {
+        transform: scaleY(3) skewX(-60deg);
+      }
+      2% {
+        transform: scaleY(1) skewX(0deg);
       }
       5% {
         clip: rect(12px, 9999px, 59px, 0);
@@ -139,6 +53,17 @@
       }
       50% {
         clip: rect(57px, 9999px, 98px, 0);
+      }
+      51% {
+      transform: scaleX(1) scaleY(1) skewX(0deg);
+      }
+        
+      52% {
+        transform: scaleX(1.5) scaleY(.2) skewX(80deg);
+      }
+        
+      53% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
       }
       55.0% {
         clip: rect(5px, 9999px, 46px, 0);
@@ -175,6 +100,15 @@
       0% {
         clip: rect(65px, 9999px, 100px, 0);
       }
+      1% {
+      transform: scaleY(1) skewX(0deg);
+      }
+      1.5% {
+        transform: scaleY(3) skewX(-60deg);
+      }
+      2% {
+        transform: scaleY(1) skewX(0deg);
+      }
       5% {
         clip: rect(52px, 9999px, 74px, 0);
       }
@@ -186,6 +120,9 @@
       }
       20% {
         clip: rect(67px, 9999px, 61px, 0);
+      }
+      23% {
+        transform: scaleX(.95);
       }
       25% {
         clip: rect(14px, 9999px, 79px, 0);
@@ -204,6 +141,17 @@
       }
       50% {
         clip: rect(71px, 9999px, 75px, 0);
+      }
+      51% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
+      }
+        
+      52% {
+        transform: scaleX(1.5) scaleY(.2) skewX(80deg);
+      }
+        
+      53% {
+        transform: scaleX(1) scaleY(1) skewX(0deg);
       }
       55.0% {
         clip: rect(2px, 9999px, 48px, 0);
@@ -256,32 +204,34 @@
 
   h2 {
     position: relative;
+    cursor: pointer;
   }
   h2:before,
   h2:after {
+    display: block;
     content: attr(data-text);
     position: absolute;
   }
   h2:after {
-    animation: glitch-animation 2s infinite linear alternate-reverse;
+    animation: glitch-animation 1s infinite linear alternate-reverse;
     clip: rect( 0, 900px, 0, 0 );
     left: 2px;
+    color: #d5dfe0;
     overflow: hidden;
+    background: #252726;
     text-shadow: -1px 0 red;
     width: 100%;
     top: 0;
   }
   h2:before {
-    animation: glitch-animation-2 3s infinite linear alternate-reverse;
+    animation: glitch-animation-2 2s infinite linear alternate-reverse;
+    color: #d5dfe0;
     clip: rect( 0, 900px, 0, 0 );
     left: -2px;
+    background: #252726;
     overflow: hidden;
-    text-shadow: 1px 0 #d754f9;
+    text-shadow: 1px 0 blue;
     top: 0;
-  }
-  h2:hover {
-    color: #C7F954;
-    text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
   }
   .contacts {
     display: flex;
