@@ -27,8 +27,8 @@
 			rgba(255, 255, 255, .05) 76%, transparent 77%, transparent
 		);
 		background-size:20px 20px;
-		
 	}
+
 	article {
 		border-left: 2px solid #D6DFE0;
 	}

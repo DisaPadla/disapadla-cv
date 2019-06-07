@@ -106,6 +106,137 @@
     }
   }
 
+  @keyframes glitch-animation {
+      0% {
+        clip: rect(42px, 9999px, 44px, 0);
+      }
+      5% {
+        clip: rect(12px, 9999px, 59px, 0);
+      }
+      10% {
+        clip: rect(48px, 9999px, 29px, 0);
+      }
+      15.0% {
+        clip: rect(42px, 9999px, 73px, 0);
+      }
+      20% {
+        clip: rect(63px, 9999px, 27px, 0);
+      }
+      25% {
+        clip: rect(34px, 9999px, 55px, 0);
+      }
+      30.0% {
+        clip: rect(86px, 9999px, 73px, 0);
+      }
+      35% {
+        clip: rect(20px, 9999px, 20px, 0);
+      }
+      40% {
+        clip: rect(26px, 9999px, 60px, 0);
+      }
+      45% {
+        clip: rect(25px, 9999px, 66px, 0);
+      }
+      50% {
+        clip: rect(57px, 9999px, 98px, 0);
+      }
+      55.0% {
+        clip: rect(5px, 9999px, 46px, 0);
+      }
+      60.0% {
+        clip: rect(82px, 9999px, 31px, 0);
+      }
+      65% {
+        clip: rect(54px, 9999px, 27px, 0);
+      }
+      70% {
+        clip: rect(28px, 9999px, 99px, 0);
+      }
+      75% {
+        clip: rect(45px, 9999px, 69px, 0);
+      }
+      80% {
+        clip: rect(23px, 9999px, 85px, 0);
+      }
+      85.0% {
+        clip: rect(54px, 9999px, 84px, 0);
+      }
+      90% {
+        clip: rect(45px, 9999px, 47px, 0);
+      }
+      95% {
+        clip: rect(37px, 9999px, 20px, 0);
+      }
+      100% {
+        clip: rect(4px, 9999px, 91px, 0);
+      }
+    }
+    @keyframes glitch-animation-2 {
+      0% {
+        clip: rect(65px, 9999px, 100px, 0);
+      }
+      5% {
+        clip: rect(52px, 9999px, 74px, 0);
+      }
+      10% {
+        clip: rect(79px, 9999px, 85px, 0);
+      }
+      15.0% {
+        clip: rect(75px, 9999px, 5px, 0);
+      }
+      20% {
+        clip: rect(67px, 9999px, 61px, 0);
+      }
+      25% {
+        clip: rect(14px, 9999px, 79px, 0);
+      }
+      30.0% {
+        clip: rect(1px, 9999px, 66px, 0);
+      }
+      35% {
+        clip: rect(86px, 9999px, 30px, 0);
+      }
+      40% {
+        clip: rect(23px, 9999px, 98px, 0);
+      }
+      45% {
+        clip: rect(85px, 9999px, 72px, 0);
+      }
+      50% {
+        clip: rect(71px, 9999px, 75px, 0);
+      }
+      55.0% {
+        clip: rect(2px, 9999px, 48px, 0);
+      }
+      60.0% {
+        clip: rect(30px, 9999px, 16px, 0);
+      }
+      65% {
+        clip: rect(59px, 9999px, 50px, 0);
+      }
+      70% {
+        clip: rect(41px, 9999px, 62px, 0);
+      }
+      75% {
+        clip: rect(2px, 9999px, 82px, 0);
+      }
+      80% {
+        clip: rect(47px, 9999px, 73px, 0);
+      }
+      85.0% {
+        clip: rect(3px, 9999px, 27px, 0);
+      }
+      90% {
+        clip: rect(26px, 9999px, 55px, 0);
+      }
+      95% {
+        clip: rect(42px, 9999px, 97px, 0);
+      }
+      100% {
+        clip: rect(38px, 9999px, 49px, 0);
+      }
+    }
+
 	.header {
     position: fixed;
     top: 0;
@@ -124,14 +255,34 @@
   }
 
   h2 {
-    animation: blink 1.8s linear 1.1s;
+    position: relative;
   }
-
+  h2:before,
+  h2:after {
+    content: attr(data-text);
+    position: absolute;
+  }
+  h2:after {
+    animation: glitch-animation 2s infinite linear alternate-reverse;
+    clip: rect( 0, 900px, 0, 0 );
+    left: 2px;
+    overflow: hidden;
+    text-shadow: -1px 0 red;
+    width: 100%;
+    top: 0;
+  }
+  h2:before {
+    animation: glitch-animation-2 3s infinite linear alternate-reverse;
+    clip: rect( 0, 900px, 0, 0 );
+    left: -2px;
+    overflow: hidden;
+    text-shadow: 1px 0 #d754f9;
+    top: 0;
+  }
   h2:hover {
     color: #C7F954;
     text-shadow: 0 0 2px #393a33, 0 0 35px #ffffff44, 0 0 8px #f39f0575, 0 0 2px #f39f0575;
   }
-
   .contacts {
     display: flex;
     justify-content: flex-start;
@@ -165,6 +316,15 @@
       transform: rotate(10deg);
     }
   }
+
+  @keyframes giggle {
+    0%, 100% {
+        transform:translate(-50%,-50%) translateY(-2px);
+    }
+    50% {
+        transform:translate(-50%,-50%) translateY(2px);
+    }
+  }
   @media (max-width: 500px) {
     .octo-arm {
       animation: none;
@@ -176,7 +336,7 @@
 </style>
 
 <div class='header'>
-  <h2 title='I have an alarm which reminds me to stay asleep'>Denis Skolzin</h2>
+  <h2 title='I have an alarm which reminds me to stay asleep' data-text='Denis Skolzin'>Denis Skolzin</h2>
   <div class='contacts'>
     <div class="cv" on:click={downloadCV}>CV</div>
     <a

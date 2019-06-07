@@ -4,12 +4,31 @@
   import React from '../static/React.svg';
   import Redux from '../static/redux.svg';
   import Styled from '../static/styled.svg';
-  import Jest from '../static/jest.svg'
+  import Jest from '../static/jest.svg';
   import Webpack from '../static/webpack.svg';
+  import Less from '../static/Less.svg';
+  import Mocha from '../static/mocha.svg';
+  import Chai from '../static/chai.svg';
+  import RxJs from '../static/rxjs.svg';
+
+  const stack = {
+    Javascript,
+    Git,
+    React,
+    Redux,
+    Styled,
+    Jest,
+    Webpack,
+    Less,
+    Mocha,
+    Chai,
+    RxJs,
+  };
 
   export let title;
   export let time;
   export let p;
+  export let technologies;
 </script>
 
 <style>
@@ -81,8 +100,8 @@
   }
 
   img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin-right: 10px;
   }
 </style>
@@ -95,13 +114,9 @@
     <div class='header'>
       <h3>{title}</h3>
        <div>
-        <img src={Git} alt='git' title='git'/>
-        <img src={Javascript} alt='js'/>
-        <img src={React} alt='react'/>
-        <img src={Redux} alt='styled-components'/>
-        <img src={Styled} alt='styled-components'/>
-        <img src={Jest} alt='styled-components'/>
-        <img src={Webpack} alt='styled-components'/>
+        {#each technologies as tech}
+          <img src={stack[tech]} alt={tech} title={tech}/>
+        {/each}
       </div>
     </div>
     {@html p}
