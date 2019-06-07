@@ -28,7 +28,6 @@
 		);
 		background-size:20px 20px;
 	}
-
 	article {
 		border-left: 2px solid #D6DFE0;
 	}

@@ -1,7 +1,9 @@
 <script>
+  import { onMount } from 'svelte';
   import Location from '../static/location.svg';
   import Phone from '../static/phone.svg';
   import Mail from '../static/mail.svg';
+  import { TextScramble } from './scramble-effect';
 
   const phone = '+380934786191';
   const mail = 'skolzinn@gmail.com';
@@ -61,11 +63,11 @@
       title="Don't call me. I sleep"
       on:click={() => clipboard(phone)}>
       <img src={Phone} alt="Don't call me"/>
-      <span>{phone}</span>
+      <span class='phone'>{phone}</span>
     </div>
     <div class='contact-copy' style="cursor: pointer;" on:click={() => clipboard(mail)}>
       <img src={Mail} alt='styled-components'/>
-      <span>{mail}</span>
+      <span class='mail'>{mail}</span>
     </div>
   </div>
   <p>Love sneakers, tech wear. 

@@ -1,13 +1,12 @@
 export class TextScramble {
-  constructor(el) {
+  constructor(el, chars) {
     this.el = el
-    this.chars = '死ぬ愛してる死沈黙'
-    this.update = this.update.bind(this)
+    this.chars = chars;
+    this.update = this.update.bind(this);
   }
   setText(newText) {
     const oldText = this.el.innerText
     const length = Math.max(oldText.length, newText.length)
-    const promise = new Promise((resolve) => this.resolve = resolve)
     this.queue = []
     for (let i = 0; i < length; i++) {
       const from = oldText[i] || ''
@@ -19,7 +18,6 @@ export class TextScramble {
     cancelAnimationFrame(this.frameRequest)
     this.frame = 0
     this.update()
-    return promise
   }
   update() {
     let output = ''
@@ -34,15 +32,13 @@ export class TextScramble {
           char = this.randomChar()
           this.queue[i].char = char
         }
-        output += `<span class="dud">${char}</span>`
+        output += char
       } else {
         output += from
       }
     }
     this.el.innerHTML = output
-    if (complete === this.queue.length) {
-      this.resolve()
-    } else {
+    if (complete !== this.queue.length) {
       this.frameRequest = requestAnimationFrame(this.update)
       this.frame++
     }
