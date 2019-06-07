@@ -1,5 +1,9 @@
 <script>
+  import { onMount } from 'svelte';
   import Telegram from '../static/telegram.svg';
+  import { TextScramble } from './scramble-effect';
+
+  const fullName = 'DENIS SKOLZIN';
 
   const downloadCV = () => {
     const anchor = document.createElement('a');
@@ -9,6 +13,12 @@
     anchor.click();
     anchor.parentNode.removeChild(anchor);
   }
+
+  onMount(() => {
+		const el = document.querySelector('.title');
+    const fx = new TextScramble(el);
+    fx.setText(fullName)
+	});
 </script>
 <style>
   @keyframes glitch-animation {
@@ -286,7 +296,7 @@
 </style>
 
 <div class='header'>
-  <h2 title='I have an alarm which reminds me to stay asleep' data-text='Denis Skolzin'>Denis Skolzin</h2>
+  <h2 class='title' title='I have an alarm which reminds me to stay asleep' data-text={fullName}>{fullName}</h2>
   <div class='contacts'>
     <div class="cv" on:click={downloadCV}>CV</div>
     <a
