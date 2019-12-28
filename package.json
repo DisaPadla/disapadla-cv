@@ -2,22 +2,11 @@
   "name": "disapadla-cv",
   "version": "1.0.0",
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "rollup": "^1.27.13",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-livereload": "^1.0.4",
-    "rollup-plugin-node-resolve": "^4.2.3",
-    "rollup-plugin-svelte": "^5.1.1",
-    "rollup-plugin-svg": "^1.0.1",
-    "rollup-plugin-terser": "^4.0.4",
-    "sirv-cli": "^0.4.5",
-    "svelte": "^3.16.5"
+    "parcel-bundler": "^1.12.4",
+    "pug": "^2.0.4"
   },
   "scripts": {
-    "build": "rollup -c",
-    "autobuild": "rollup -c -w",
-    "dev": "run-p start:dev autobuild",
-    "start": "sirv public",
-    "start:dev": "sirv public --dev"
+    "dev": "parcel ./src/index.pug",
+    "build": "parcel build ./src/index.pug"
   }
 }
