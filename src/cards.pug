@@ -9,5 +9,5 @@ article
         h3= template.title
         div
           each technology in template.technologies
-            img(src=`../static/${technology}.svg`, alt={technology})
+            img(src=`../static/${technology.toLowerCase()}.svg`, alt=technology)
       p.card__content= template.p
