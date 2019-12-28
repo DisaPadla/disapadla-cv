@@ -1,0 +1,20 @@
+[
+  {
+    "time": "Nov, 2017 - Present",
+    "title": "FDI Ukraine - Javascript Dev",
+    "p": "Led the development process of IoT Web Application for accompanying pregnancy and finding problems with the fetus at an early stage for Israeli Medical Client. Create an app for displaying mother/fetal heart rate. Synchronize secondary charts with main chart and each other. The ability to change interval for each chart or for all at the same time.",
+    "technologies": ["React", "Redux", "Webpack", "Jest", "Styled", "RxJs", "Git"]
+  },
+  {
+    "time": "Nov, 2017 - Present",
+    "title": "FDI Ukraine - Javascript Dev",
+    "p": "Led the development process of IoT Web Application for accompanying pregnancy and finding problems with the fetus at an early stage for Israeli Medical Client. Create an app for displaying mother/fetal heart rate. Synchronize secondary charts with main chart and each other. The ability to change interval for each chart or for all at the same time.",
+    "technologies": ["React", "Redux", "Webpack", "Jest", "Styled", "RxJs", "Git"]
+  },
+  {
+    "time": "Nov, 2017 - Present",
+    "title": "FDI Ukraine - Javascript Dev",
+    "p": "Led the development process of IoT Web Application for accompanying pregnancy and finding problems with the fetus at an early stage for Israeli Medical Client. Create an app for displaying mother/fetal heart rate. Synchronize secondary charts with main chart and each other. The ability to change interval for each chart or for all at the same time.",
+    "technologies": ["React", "Redux", "Webpack", "Jest", "Styled", "RxJs", "Git"]
+  }
+]

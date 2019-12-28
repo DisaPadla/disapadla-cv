@@ -1,0 +1,13 @@
+
+- const templates = JSON.parse(readFileSync("./src/templates.json", "utf-8"));
+article
+  each template in templates
+    section.card
+      .card__time-section
+        span.card__time-section__time= template.time
+      .card__header
+        h3= template.title
+        div
+          each technology in template.technologies
+            img(src=`../static/${technology}.svg`, alt={technology})
+      p.card__content= template.p

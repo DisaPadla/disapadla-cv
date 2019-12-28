@@ -1,0 +1,88 @@
+@media (max-width: 500px) {
+  .octo-arm {
+    animation: none;
+  }
+  .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 20px;
+  background: #252726;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 10;
+}
+
+.top-bar__name {
+  position: relative;
+  cursor: pointer;
+  width: 300px;
+}
+.top-bar__name:before,
+.top-bar__name:after {
+  display: block;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #252726;
+  clip: rect( 0, 900px, 0, 0 );
+  overflow: hidden;
+}
+.top-bar__name:after {
+  animation: glitch-animation 1s infinite linear alternate-reverse;
+  left: 2px;
+  text-shadow: -1px 0 red;
+}
+.top-bar__name:before {
+  animation: glitch-animation-2 2s infinite linear alternate-reverse;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+}
+
+.top-bar__contacts {
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+}
+
+.top-bar__contacts__cv {
+  position: relative;
+  font-size: 26px;
+  cursor: pointer;
+}
+.top-bar__contacts__cv:before,
+.top-bar__contacts__cv:after {
+  display: block;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: #252726;
+  clip: rect( 0, 900px, 0, 0 );
+  overflow: hidden;
+}
+.top-bar__contacts__cv:after {
+  animation: glitch-animation 1s infinite linear alternate-reverse;
+  left: 2px;
+  text-shadow: -1px 0 red;
+}
+.top-bar__contacts__cv:before {
+  animation: glitch-animation-2 2s infinite linear alternate-reverse;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+}
+
+.top-bar__contacts__github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
